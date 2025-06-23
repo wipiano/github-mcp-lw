@@ -1,0 +1,10 @@
+{
+  "mcpServers": {
+    "github-lightweight": {
+      "command": "github-mcp-lightweight",
+      "env": {
+        "GITHUB_TOKEN": "ghp_your_personal_access_token_here"
+      }
+    }
+  }
+}

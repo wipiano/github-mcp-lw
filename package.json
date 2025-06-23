@@ -1,0 +1,50 @@
+{
+  "name": "@wipiano/github-mcp-lightweight",
+  "version": "0.0.1",
+  "description": "Lightweight GitHub MCP server optimized for efficient issue and pull request analysis",
+  "author": "wipiano",
+  "license": "MIT",
+  "main": "build/index.js",
+  "bin": {
+    "github-mcp-lightweight": "build/index.js"
+  },
+  "type": "module",
+  "files": [
+    "build/",
+    "README.md",
+    "LICENSE"
+  ],
+  "scripts": {
+    "build": "tsc && chmod +x build/index.js",
+    "start": "node build/index.js",
+    "dev": "tsc --watch",
+    "prepublishOnly": "npm run build"
+  },
+  "keywords": [
+    "mcp",
+    "github",
+    "lightweight",
+    "issues",
+    "pull-requests",
+    "model-context-protocol"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/wipiano/github-mcp-lw.git"
+  },
+  "bugs": {
+    "url": "https://github.com/wipiano/github-mcp-lw/issues"
+  },
+  "homepage": "https://github.com/wipiano/github-mcp-lw#readme",
+  "dependencies": {
+    "@modelcontextprotocol/sdk": "^0.6.0",
+    "axios": "^1.6.0"
+  },
+  "devDependencies": {
+    "@types/node": "^20.0.0",
+    "typescript": "^5.0.0"
+  },
+  "engines": {
+    "node": ">=18.0.0"
+  }
+}
