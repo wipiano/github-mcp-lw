@@ -36,7 +36,7 @@ This document contains instructions for publishing the GitHub MCP Lightweight se
 
 4. **Publish**: Publish to npm
    ```bash
-   npm publish
+   npm publish --access public
    ```
 
 ## Post-Publishing

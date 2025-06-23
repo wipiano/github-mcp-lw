@@ -42,7 +42,7 @@ Edit `~/.vscode-server/data/User/globalStorage/saoudrizwan.claude-dev/settings/c
       "type": "stdio",
       "args": [
         "-y",
-        "@wipiano/github-cmp-lightweight"
+        "@wipiano/github-mcp-lightweight"
       ],
       "env": {
         "GITHUB_TOKEN": "ghp_your_personal_access_token_here"
