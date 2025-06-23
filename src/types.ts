@@ -6,7 +6,7 @@ export interface LightweightIssue {
   html_url: string;
   title: string;
   body: string | null;
-  comments: string[];
+  comments: LightweightComment[];
 }
 
 /**
@@ -17,7 +17,13 @@ export interface LightweightPullRequest {
   html_url: string;
   title: string;
   body: string | null;
-  comments: string[];
+  comments: LightweightComment[];
+}
+
+export interface LightweightComment {
+  body: string;
+  author: string;
+  created_at: string;
 }
 
 /**
@@ -39,6 +45,10 @@ export interface GitHubIssue {
  */
 export interface GitHubComment {
   body: string;
+  user: {
+    login: string;
+  },
+  created_at: string;
 }
 
 /**

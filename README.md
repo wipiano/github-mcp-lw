@@ -38,7 +38,12 @@ Edit `~/.vscode-server/data/User/globalStorage/saoudrizwan.claude-dev/settings/c
 {
   "mcpServers": {
     "github-lightweight": {
-      "command": "github-mcp-lightweight",
+      "command": "npx",
+      "type": "stdio",
+      "args": [
+        "-y",
+        "@wipiano/github-cmp-lightweight"
+      ],
       "env": {
         "GITHUB_TOKEN": "ghp_your_personal_access_token_here"
       }

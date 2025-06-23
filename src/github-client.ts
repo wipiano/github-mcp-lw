@@ -4,7 +4,8 @@ import {
   GitHubComment,
   LightweightIssue,
   LightweightPullRequest,
-  GitHubError
+  GitHubError,
+  LightweightComment
 } from './types.js';
 
 export class GitHubClient {
@@ -109,7 +110,7 @@ export class GitHubClient {
   /**
    * Fetch comments for an issue or pull request
    */
-  private async getComments(commentsUrl: string): Promise<string[]> {
+  private async getComments(commentsUrl: string): Promise<LightweightComment[]> {
     try {
       // Extract the path from the full URL
       const url = new URL(commentsUrl);
@@ -121,10 +122,15 @@ export class GitHubClient {
         }
       });
 
-      return response.data.map(comment => comment.body);
+      return response.data.map(comment => ({
+        body: comment.body,
+        author: comment.user.login,
+        created_at: comment.created_at
+      }));
     } catch (error) {
       // If comments fail to load, return empty array rather than failing the entire request
       console.error('Failed to fetch comments:', error);
+
       return [];
     }
   }
