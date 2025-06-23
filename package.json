@@ -1,6 +1,6 @@
 {
   "name": "@wipiano/github-mcp-lightweight",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "Lightweight GitHub MCP server optimized for efficient issue and pull request analysis",
   "author": "wipiano",
   "license": "MIT",
